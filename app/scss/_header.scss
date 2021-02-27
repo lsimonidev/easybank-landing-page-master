@@ -2,10 +2,6 @@
     position:relative;
     &.open{
 
-        .overlay{
-            
-        }
-
         .header__menu{
             >span:first-child{
                 transform: rotate(45deg);
@@ -31,8 +27,10 @@
     }
     
     nav{
-        padding: 1rem 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
+
     &__logo{
         img{
             width: 8.8125rem;
@@ -87,6 +85,23 @@
                     opacity: 1;
                 }
             }
+        }
+
+    }
+
+    &__links-desktop{
+        position:absolute;
+        background: $white;
+        padding: 1.625rem;
+        border-radius: 5px;
+        width: calc(100% - 3rem);
+        margin-top: 1.5rem;
+
+        a{
+            color: $darkBlue;
+            padding: 0.625rem;
+            display: block;
+            text-align: center;
         }
     }
 

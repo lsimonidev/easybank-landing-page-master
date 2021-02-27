@@ -1,11 +1,16 @@
+const body = document.querySelector('body');
 const btnHamburger = document.getElementById('btnHamburger');
 const header = document.getElementById('header');
-const overlay = document.getElementById('overlay');
+const fadeOut = document.querySelectorAll('.fade-out');
+
+console.log(fadeOut);
 
 btnHamburger.addEventListener('click', ()=>{
-    console.log(header.classList);
     header.classList.toggle('open');
-    overlay.classList.toggle('fade-in');
-    overlay.classList.toggle('fade-out');
+    body.classList.toggle('noscroll');
+   fadeOut.forEach(element => {
+       element.classList.toggle('fade-in');
+       element.classList.toggle('fade-out');
+   });
 })
 
